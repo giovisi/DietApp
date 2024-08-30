@@ -1,0 +1,420 @@
+#anchor {
+	-fx-background-color: "rgb(245, 245, 255)";
+}
+
+#title {
+	-fx-background-color: "rgb(245, 245, 255)";
+	/*-fx-text-fill: "rgb(33, 41, 61)"; */
+}
+
+
+
+/* Rounded corners on left pane*/
+#leftPane {
+	-fx-background-color: "rgb(245, 245, 255)";
+	-fx-padding: 10px;
+	/*-fx-background-radius: 15px;
+	-fx-padding: 20px;
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);*/
+}
+
+#rightPane {
+	-fx-background-color: "rgb(245, 245, 255)";
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 20, 0, 0, 10);
+    -fx-padding: 20px;
+    -fx-alignment: center;
+    -fx-vgap: 20px;
+    -fx-hgap: 20px;
+}
+
+.labels:readonly {
+	-fx-background-color: "rgb(245, 245, 255)";
+	-fx-text-fill: #1976D2;
+	-fx-font: 16 "Arial Rounded MT Bold";
+	-fx-padding: 5 0 5 0;
+	-fx-cursor: default;
+}
+
+.activityLabels:readonly {
+	-fx-background-color: "rgb(245, 245, 255)";
+	-fx-text-fill: #A9A9A9;
+	-fx-font: 14 "Arial Rounded MT Bold";
+	-fx-padding: 5 0 5 10;
+	-fx-cursor: default;
+}
+
+.empty:readonly {
+	-fx-background-color: "rgb(245, 245, 255)";
+	-fx-cursor: default;
+}
+
+.fields {
+	-fx-background-color: "rgb(245, 245, 255)";
+	-fx-border-color: "#DEDEDE";
+	-fx-text-fill: "grey";
+	-fx-border-radius: 4px;
+	-fx-border-width: 2px;
+	-fx-font: 14 "Arial Rounded MT Bold";
+	-fx-padding: 5;
+}
+
+.fields:promptText {
+	-fx-fill: #A9A9A9;
+}
+
+.fields:hover {
+	-fx-background-color: "rgb(245, 245, 255)";
+	-fx-border-color: "#FDD835";
+	-fx-text-fill: "rgb(0, 128, 0)"; 
+	-fx-border-radius: 4px;
+	-fx-font: 14 "Arial Rounded MT Bold";
+}
+
+.box {
+	-fx-background-color: "rgb(245, 245, 255)";
+	-fx-border-color: "#DEDEDE";
+	-fx-text-fill: "grey"; 
+	-fx-border-radius: 4px;
+	-fx-border-width: 2px;
+	-fx-font: 14 "Arial Rounded MT Bold";
+}
+
+.combo-box {
+    -fx-background-color: "rgb(245, 245, 255)"; /* Light gray background */
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-border-width: 2px;
+    -fx-border-color: "#DEDEDE"; /* Light gray border */
+    -fx-font: 14 "Arial Rounded MT Bold";
+}
+
+.combo-box:hover {
+    -fx-text-fill: "rgb(0, 128, 0)";
+    -fx-border-color: #FDD835;
+}
+
+.combo-box:hover .arrow-button .arrow {
+    -fx-background-color: "rgb(0, 128, 0)";
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: "rgb(245, 245, 255)";
+    -fx-background-radius: 4px;
+}
+
+.combo-box .arrow-button .arrow {
+    -fx-background-color: "gray";
+    -fx-fill: #A9A9A9;
+}
+.combo-box .arrow-button:hover .arrow {
+    -fx-background-color: #FDD835;
+}
+
+.combo-box .arrow-button:hover {
+    -fx-background-color: #DEDEDE; /* Slightly darker gray on hover */
+}
+
+.combo-box .list-cell {
+    -fx-background-color: "rgb(245, 245, 255)"; /* White background for list items */
+    -fx-text-fill: "grey"; /* Dark gray text color */
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: "rgb(245, 245, 255)"; /* White background for list items */
+    -fx-text-fill: "rgb(0, 128, 0)"; /* Dark gray text color */
+}
+
+
+.combo-box .list-cell:filled:selected, .combo-box .list-cell:filled:hover:selected {
+    -fx-background-color: "rgb(245, 245, 255)"; /* Light gray for selected item */
+    -fx-text-fill: gray;
+}
+
+.combo-box .text-field {
+    -fx-background-color: "rgb(245, 245, 255)"; /* Make the text field background transparent */
+    -fx-border-width: 0;
+    -fx-text-fill: grey;
+    -fx-font-family: "Arial Rounded MT Bold";
+    -fx-font-size: 14;
+}
+.combo-box .text-field:hover {
+    -fx-background-color: "rgb(245, 245, 255)"; /* Make the text field background transparent */
+    -fx-border-width: 0;
+    -fx-text-fill: "rgb(0, 128, 0)";
+    -fx-font-family: "Arial Rounded MT Bold";
+    -fx-font-size: 14;
+}
+
+/* Vertical Scroll Bar */
+.combo-box-popup .scroll-bar:vertical {
+    -fx-background-color: rgb(245, 245, 255); /* Background color */
+}
+
+.combo-box-popup .scroll-bar:vertical .track {
+    -fx-background-color: transparent; /* Track color */
+}
+
+.combo-box-popup .scroll-bar:vertical .thumb {
+    -fx-background-color: #BDBDBD; /* Thumb color */
+    -fx-background-insets: 0, 1, 2; /* Insets */
+    -fx-background-radius: 5px; /* Thumb corner radius */
+}
+
+.combo-box-popup .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: gray; /* Thumb color on hover */
+}
+
+.combo-box-popup .scroll-bar:vertical .thumb:pressed {
+    -fx-background-color: #424242; /* Thumb color when pressed */
+}
+
+.tooltips {
+    -fx-font-family: "Arial Rounded MT Bold";
+    -fx-font-size: 14;
+    -fx-background-color: gray;
+}
+
+.radio-button {
+    -fx-padding: 8px;
+    -fx-cursor: hand;
+}
+
+.radio-button .text {
+    -fx-font-family: "Arial Rounded MT Bold";
+    -fx-font-size: 14;
+    -fx-fill: gray;
+}
+
+.radio-button .radio {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-border-color: #DEDEDE;
+    -fx-border-radius: 50%;
+    -fx-pref-width: 20px;
+    -fx-pref-height: 20px;
+    -fx-alignment: CENTER;
+    -fx-transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.radio-button:selected .radio {
+    -fx-background-color: rgb(245, 245, 255); /* Darker shade on hover */
+    -fx-border-width: 0;
+}
+
+.radio-button:hover .radio {
+    -fx-border-color: #FDD835; /* Change border color on hover */
+}
+
+.radio-button:selected:hover .radio {
+    -fx-background-color: rgb(0, 128, 0); /* Material blue color */
+    -fx-border-width: 0;
+}
+
+.radio-button .dot {
+    -fx-background-color: #DEDEDE;
+}
+.radio-button:hover .dot {
+    -fx-background-color: #FDD835;
+}
+
+.radio-button:selected .dot {
+    -fx-background-color: gray;/*for blue dot: #1976D2;*/
+}
+
+.radio-button:selected:hover .dot {
+    -fx-background-color: rgb(0, 128, 0); /* Darker shade on hover */
+}
+
+.radio-button:hover .text {
+    -fx-fill: #FDD835;
+}
+.radio-button:selected:hover .text {
+    -fx-fill: gray;
+}
+
+.button {
+     -fx-background-color: #1976D2; /* Material blue color */
+     -fx-text-fill: white; /* Text color */
+     -fx-font-size: 25px; /* Font size */
+     -fx-font-family: "Arial Rounded MT Bold"; /* Font family */
+     -fx-background-radius: 5px; /* Rounded corners */
+     -fx-padding: 8px 16px; /* Padding */
+     -fx-border-color: transparent;
+     -fx-border-radius: 0;
+ }
+
+.button:hover {
+    -fx-background-color: #FDD835; /* Darker shade on hover */
+}
+
+.button:pressed {
+    -fx-background-color: #E6C81E;
+}
+
+.switch-button {
+     -fx-background-color: #DEDEDE; /* Material blue color */
+     -fx-text-fill: #1976D2; /* Text color */
+     -fx-font-size: 20px; /* Font size */
+     -fx-font-family: "Arial Rounded MT Bold"; /* Font family */
+     -fx-background-radius: 5px; /* Rounded corners */
+     -fx-padding: 8px 16px; /* Padding */
+}
+.switch-button:hover {
+    -fx-background-color: #1976D2; /* Darker shade on hover */
+    -fx-text-fill: white;
+}
+
+.switch-button:pressed {
+    -fx-background-color: #0F5696;
+}}
+
+.go-back-button {
+     -fx-background-color: rgb(245, 245, 255); /* Material blue color */
+     -fx-text-fill: #DEDEDE; /* Text color */
+     -fx-font-size: 14px; /* Font size */
+     -fx-font-family: "Arial Rounded MT Bold"; /* Font family */
+     -fx-background-radius: 5px; /* Rounded corners */
+     -fx-padding: 8px 16px; /* Padding */
+}
+.go-back-button .svg-path {
+    -fx-background-color: rgb(245, 245, 255);
+    -fx-fill: #DEDEDE;
+}
+.go-back-button:hover {
+    -fx-background-color: #DEDEDE; /* Darker shade on hover */
+    -fx-text-fill: white;
+}
+.go-back-button:hover .svg-path {
+    -fx-background-color: #DEDEDE; /* Darker shade on hover */
+    -fx-fill: white;
+}
+
+.go-back-button:pressed {
+    -fx-background-color: grey;
+    -fx-text-fill: white;
+}
+.go-back-button:pressed .svg-path {
+    -fx-background-color: grey;
+    -fx-fill: white;
+}
+
+.total-calories:readonly {
+	-fx-background-color: "rgb(245, 245, 255)";
+	-fx-text-fill: #1976D2;
+	-fx-font: 18 "Arial Rounded MT Bold";
+	-fx-padding: 5 0 5 0;
+	-fx-cursor: default;
+	-fx-alignment: center;
+}
+
+
+/* Alert style*/
+
+.custom-dialog-pane {
+    -fx-font-family: "Arial Rounded MT Bold"; /* Font family */
+    -fx-background-color: rgb(245, 245, 255); /* White background */
+    -fx-background-radius: 4px;
+    -fx-border-color: #DEDEDE; /* Light grey border */
+    -fx-border-width: 2px; /* Border width */
+    -fx-border-radius: 4px; /* Rounded corners */
+    -fx-padding: 20px; /* Padding */
+}
+
+/* OK button style */
+.ok-button {
+    -fx-background-color: #1976D2; /* Material blue color */
+    -fx-text-fill: white; /* Text color */
+    -fx-font-size: 15px; /* Font size */
+    -fx-font-family: "Arial Rounded MT Bold"; /* Font family */
+    -fx-background-radius: 4px; /* Rounded corners */
+    -fx-padding: 8px 16px; /* Padding */
+    -fx-cursor: hand; /* Cursor on hover */
+}
+
+.ok-button:hover {
+    -fx-background-color: #FDD835; /* Darker shade on hover */
+}
+.ok-button:pressed {
+    -fx-background-color: #E6C81E; /* Darker shade on hover */
+}
+
+.dialog-pane .content.label {
+    -fx-font-size: 16px; /* Font size for content text */
+    -fx-text-fill: gray; /* Text color */
+}
+
+.protein-title {
+    -fx-background-color: rgb(245, 245, 255); /* White background */
+    -fx-font-size: 18px; /* Font size */
+    -fx-font-family: "Arial Rounded MT Bold"; /* Font family */
+    -fx-border-width: 0px; /* Border width */
+    -fx-text-fill: #DD3333;
+    -fx-padding: 5;
+}
+.fat-title {
+    -fx-background-color: rgb(245, 245, 255); /* White background */
+    -fx-font-size: 18px; /* Font size */
+    -fx-font-family: "Arial Rounded MT Bold"; /* Font family */
+    -fx-border-width: 0px; /* Border width */
+    -fx-text-fill: rgb(0, 128, 0);
+    -fx-padding: 5;
+}
+.carbohydrate-title {
+    -fx-background-color: rgb(245, 245, 255); /* White background */
+    -fx-font-size: 18px; /* Font size */
+    -fx-font-family: "Arial Rounded MT Bold"; /* Font family */
+    -fx-border-width: 0px; /* Border width */
+    -fx-text-fill: #FDD835;
+    -fx-padding: 5;
+}
+
+.protein-label {
+    -fx-background-color: rgb(245, 245, 255); /* White background */
+    -fx-font-size: 15px; /* Font size */
+    -fx-font-family: "Arial Rounded MT Bold"; /* Font family */
+    -fx-border-width: 0px; /* Border width */
+    -fx-text-fill: #DD3333;
+    -fx-padding: 5;
+}
+.fat-label {
+    -fx-background-color: rgb(245, 245, 255); /* White background */
+    -fx-font-size: 15px; /* Font size */
+    -fx-font-family: "Arial Rounded MT Bold"; /* Font family */
+    -fx-border-width: 0px; /* Border width */
+    -fx-text-fill: rgb(0, 128, 0);
+    -fx-padding: 5;
+}
+.carbohydrate-label {
+    -fx-background-color: rgb(245, 245, 255); /* White background */
+    -fx-font-size: 15px; /* Font size */
+    -fx-font-family: "Arial Rounded MT Bold"; /* Font family */
+    -fx-border-width: 0px; /* Border width */
+    -fx-text-fill: #FDD835;
+    -fx-padding: 5;
+}
+
+.chart {
+    -fx-background-color: rgb(245, 245, 255);
+}
+.chart-pie {
+    -fx-border-width: 0;
+}
+
+.bar-chart {
+    -fx-border-width: 0;
+}
+.bar-chart {
+    -fx-background-color: rgb(245, 245, 255); /* Background color */
+    -fx-padding: 10px; /* Padding */
+}
+.chart-axis {
+    -fx-tick-label-fill: transparent; /* Hide tick labels */
+    -fx-tick-mark-visible: hidden; /* Hide tick marks */
+    -fx-minor-tick-count: 0;
+    -fx-minor-tick-visible: false;
+}
+
+.default-color0.chart-bar.bar0 { -fx-bar-fill: #DD3333; }
+.default-color1.chart-bar.bar1 { -fx-bar-fill: rgb(0, 128, 0); }
+.default-color2.chart-bar.bar2 { -fx-bar-fill: #FDD835; }

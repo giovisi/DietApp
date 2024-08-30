@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.text.TextFlow?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.shape.SVGPath?>
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="814.0" prefWidth="1058.0" style=" -fx-background-color: rgb(245, 245, 255);" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diet.ui.PaneController">
+   <children>
+      <FlowPane fx:id="basePane" layoutX="300" layoutY="-20" prefHeight="824.0" prefWidth="893.0" style=" -fx-background-color: rgb(245, 245, 255);">
+         <children>
+            <VBox fx:id="leftPane" prefHeight="716.0" prefWidth="344.0" stylesheets="@style/style.css" alignment="CENTER">
+               <children>
+                  <TextFlow fx:id="title">
+                     <children>
+                        <Text text="Welcome to your " style="-fx-fill: #1976D2; -fx-font-family: 'Arial Rounded MT Bold'; -fx-font-size: 25;" />
+                        <Text text="Diet App" style="-fx-fill: #FDD835; -fx-font-family: 'Arial Rounded MT Bold'; -fx-font-size: 25;" />
+                        <Text text="!" style="-fx-fill: #1976D2; -fx-font-family: 'Arial Rounded MT Bold'; -fx-font-size: 25;" />
+                     </children>
+                  </TextFlow>
+                  <TextField editable="false" styleClass="empty" />
+                  <TextField editable="false" styleClass="labels" text="Please enter your data:" />
+                  <TextField fx:id="nameField" prefHeight="31.0" prefWidth="310.0" promptText="Name" styleClass="fields" />
+                  <TextField editable="false" styleClass="empty" />
+                  <TextField fx:id="surnameField" promptText="Surname" styleClass="fields" />
+                  <TextField editable="false" styleClass="empty"/>
+                  <HBox fx:id="ageAndHeight" prefHeight="25.0" prefWidth="324.0">
+                     <children>
+                        <ComboBox fx:id="ageBox" prefWidth="130.0" promptText="Age" styleClass="combo-box" visibleRowCount="5" />
+                        <ComboBox fx:id="sexBox" prefWidth="170.0" promptText="Sex" styleClass="combo-box" visibleRowCount="2" />
+                        <TextField fx:id="heightField" promptText="Height [cm]" styleClass="fields" />
+                     </children>
+                  </HBox>
+                  <TextField editable="false" styleClass="empty" />
+                  <HBox fx:id="weightsAndPKRatio" prefHeight="25.0" prefWidth="324.0">
+                     <children>
+                        <TextField fx:id="weightField" promptText="Weight [kg]" styleClass="fields" />
+                        <TextField fx:id="PKRatioField" promptText="Protein/kg" styleClass="fields" />
+                        <TextField fx:id="fatPercentageField" promptText="Fat %" styleClass="fields" />
+                     </children>
+                  </HBox>
+                  <TextField editable="false" styleClass="empty" />
+                  <TextField editable="false" styleClass="labels" text="Please enter your activity:"/>
+               </children>
+               <HBox fx:id="restHoursBox" prefHeight="25.0" prefWidth="324.0">
+                  <children>
+                     <TextField fx:id="restHoursField" styleClass="fields" maxWidth="40">
+                        <tooltip><Tooltip text="Hours must add up to 24" styleClass="tooltips"/></tooltip>
+                     </TextField>
+                     <TextField editable="false" text="Hours of rest in a day" styleClass="activityLabels" prefWidth="284"/>
+                  </children>
+               </HBox>
+               <HBox fx:id="veryLightHoursBox" prefHeight="25.0" prefWidth="324.0">
+                  <children>
+                     <TextField fx:id="veryLightHoursField" styleClass="fields" maxWidth="40">
+                        <tooltip><Tooltip text="Hours must add up to 24" styleClass="tooltips"/></tooltip>
+                     </TextField>
+                     <TextField editable="false" text="Hours of very light activity in a day" styleClass="activityLabels" prefWidth="284"/>
+                  </children>
+               </HBox>
+               <HBox fx:id="lightHoursBox" prefHeight="25.0" prefWidth="324.0">
+                  <children>
+                     <TextField fx:id="lightHoursField" styleClass="fields" maxWidth="40">
+                        <tooltip><Tooltip text="Hours must add up to 24" styleClass="tooltips"/></tooltip>
+                     </TextField>
+                     <TextField editable="false" text="Hours of light activity in a day" styleClass="activityLabels" prefWidth="284"/>
+                  </children>
+               </HBox>
+               <HBox fx:id="moderateHoursBox" prefHeight="25.0" prefWidth="324.0">
+                  <children>
+                     <TextField fx:id="moderateHoursField" styleClass="fields" maxWidth="40">
+                        <tooltip><Tooltip text="Hours must add up to 24" styleClass="tooltips"/></tooltip>
+                     </TextField>
+                     <TextField editable="false" text="Hours of activity work in a day" styleClass="activityLabels" prefWidth="284"/>
+                  </children>
+               </HBox>
+               <HBox fx:id="intenseeHoursBox" prefHeight="25.0" prefWidth="324.0">
+                  <children>
+                     <TextField fx:id="intenseHoursField" styleClass="fields" maxWidth="40">
+                        <tooltip><Tooltip text="Hours must add up to 24" styleClass="tooltips"/></tooltip>
+                     </TextField>
+                     <TextField editable="false" text="Hours of activity work in a day" styleClass="activityLabels" prefWidth="284"/>
+                  </children>
+               </HBox>
+               <TextField editable="false" styleClass="empty" />
+               <TextField editable="false" styleClass="labels" text="Please enter the diet type:"/>
+               <HBox fx:id="radioBox" prefHeight="25.0" prefWidth="324.0">
+
+                  <RadioButton fx:id="hypoRadio" text="Hypocal" styleClass="radio-button" />
+                  <RadioButton fx:id="normoRadio" text="Normocal" styleClass="radio-button" />
+                  <RadioButton fx:id="hyperRadio" text="Hypercal" styleClass="radio-button" />
+               </HBox>
+               <TextField editable="false" styleClass="empty" />
+               <Button fx:id="calculate" text="Calculate" onAction="#buttonHandler" styleClass="button"/>
+            </VBox>
+            <Region fx:id="spacer" prefHeight="716.0" prefWidth="0" style=" -fx-background-color: rgb(245, 245, 255);"/>
+            <GridPane fx:id="rightPane" prefHeight="716.0" prefWidth="550" maxHeight="600">
+               <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" percentWidth="33.33" />
+                  <ColumnConstraints halignment="CENTER" percentWidth="33.33" />
+                  <ColumnConstraints halignment="CENTER" percentWidth="33.33" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints valignment="CENTER" />
+                  <RowConstraints valignment="CENTER" />
+                  <RowConstraints valignment="CENTER" />
+                  <RowConstraints valignment="CENTER" />
+                  <RowConstraints valignment="CENTER" />
+                  <RowConstraints valignment="CENTER" />
+                  <RowConstraints valignment="CENTER" />
+               </rowConstraints>
+               <Button fx:id="goBackButton" text="Back" GridPane.rowIndex="0" GridPane.columnIndex="0" styleClass="go-back-button" onAction="#goBackHandler" alignment="BASELINE_LEFT">
+                  <graphic>
+                     <SVGPath content="M10 0 L0 10 L10 20 L12 18 L4 10 L12 2 Z" styleClass="svg-path"/>
+                  </graphic>
+               </Button>
+               <TextField fx:id="totalCalories" editable="false" GridPane.rowIndex="0" GridPane.columnIndex="1" styleClass="total-calories"/>
+
+               <Label text="PROTEINS" GridPane.rowIndex="1" GridPane.columnIndex="0" styleClass="protein-title" />
+               <Label text="FATS" GridPane.rowIndex="1" GridPane.columnIndex="1" styleClass="fat-title" />
+               <Label text="CARBS" GridPane.rowIndex="1" GridPane.columnIndex="2" styleClass="carbohydrate-title" />
+
+               <Label fx:id="proteinGrams" GridPane.rowIndex="2" GridPane.columnIndex="0" styleClass="protein-label" />
+               <Label fx:id="fatGrams" GridPane.rowIndex="2" GridPane.columnIndex="1" styleClass="fat-label" />
+               <Label fx:id="carbohydrateGrams" GridPane.rowIndex="2" GridPane.columnIndex="2" styleClass="carbohydrate-label" />
+
+               <Label fx:id="proteinCalories" GridPane.rowIndex="3" GridPane.columnIndex="0" styleClass="protein-label" />
+               <Label fx:id="fatCalories" GridPane.rowIndex="3" GridPane.columnIndex="1" styleClass="fat-label" />
+               <Label fx:id="carbohydrateCalories" GridPane.rowIndex="3" GridPane.columnIndex="2" styleClass="carbohydrate-label" />
+
+
+               <Label fx:id="proteinPercentage" GridPane.rowIndex="4" GridPane.columnIndex="0" styleClass="protein-label" />
+               <Label fx:id="fatPercentage" GridPane.rowIndex="4" GridPane.columnIndex="1" styleClass="fat-label" />
+               <Label fx:id="carbohydratePercentage" GridPane.rowIndex="4" GridPane.columnIndex="2" styleClass="carbohydrate-label" />
+
+               <PieChart fx:id="macrosPieChart" GridPane.rowIndex="5" GridPane.columnSpan="3" styleClass="chart-pie"/>
+               <BarChart fx:id="macrosBarChart" GridPane.rowIndex="5" GridPane.columnSpan="3" styleClass="bar-chart" >
+                  <xAxis>
+                     <CategoryAxis fx:id="xAxis" side="BOTTOM" styleClass="chart-axis" />
+                  </xAxis>
+                  <yAxis>
+                     <NumberAxis fx:id="yAxis" side="LEFT" styleClass="chart-axis"  />
+                  </yAxis>
+               </BarChart>
+               <Button fx:id="switchView" text="Switch view" GridPane.rowIndex="6" GridPane.columnSpan="3" styleClass="switch-button" onAction="#switchViewHandler" />
+            </GridPane>
+         </children>
+      </FlowPane>
+   </children>
+</AnchorPane>
